@@ -1,5 +1,12 @@
 # Classe de base Vehicule
-
+class Vehicule:
+    def __init__(self, marque, modele, annee):
+        self.marque = marque
+        self.modele = modele
+        self.annee = annee
+    def afficher_info(self):
+        print('Marque: {}\nModele: {}\nAnnee: {}'.format(self.marque,self.modele,self.annee))
+        
 # Classe Moteur
 class Moteur:
     def __init__(self, puissance, type_moteur):
@@ -8,16 +15,10 @@ class Moteur:
     def afficher_moteur(self):
         print('Puissance: {}\nType_Moteur: {}'.format(self.puissance,self.type_moteur))
 
-class Vehicule:
-    def __init__(self, marque, modele, annee):
-        self.marque = marque
-        self.modele = modele
-        self.annee = annee
-    def afficher_info(self):
-        print('Marque: {}\nModele: {}\nAnnee: {}'.format(self.marque,self.modele,self.annee))
+
 
 # Classe Voiture héritant de Vehicule et Moteur
-class Voiture(Moteur,Vehicule):
+class Voiture(Vehicule,Moteur):
     def __init__(self, marque, modele, annee, puissance, type_moteur, nombre_de_places):
         Vehicule.__init__(self, marque, modele, annee)
         Moteur.__init__(self, puissance, type_moteur)
@@ -28,7 +29,7 @@ class Voiture(Moteur,Vehicule):
         print("Nombre de places: {}".format(self.nombre_de_places))
 
 # Classe Moto héritant de Vehicule et Moteur
-class Moto(Moteur,Vehicule):
+class Moto(Vehicule, Moteur):
     def __init__(self, marque, modele, annee, puissance, type_moteur, type_moto):
         Vehicule.__init__(self, marque, modele, annee)
         Moteur.__init__(self, puissance, type_moteur)
