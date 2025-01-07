@@ -1,0 +1,17 @@
+{
+    "Etudiant_1": {
+        "nom": "jamila",
+        "age": 22,
+        "note": 15
+    },
+    "Etudiant_2": {
+        "nom": "said",
+        "age": 23,
+        "note": 15
+    },
+    "Etudiant_3": {
+        "nom": "karima",
+        "age": 23,
+        "note": 16
+    }
+}
