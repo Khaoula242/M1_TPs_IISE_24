@@ -20,3 +20,4 @@ def read_file(filename):
 
 # Exemple d'utilisation
 read_file("testt.txt")
+

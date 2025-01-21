@@ -3,7 +3,7 @@
 
 def somme_varargs(*args):
     somme=0
-    for nmbr in tuple3:
+    for nmbr in args:
         somme+=nmbr
     return somme   
 tuple3=(1,3,4,9)
